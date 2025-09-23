@@ -1,1 +1,1 @@
-# magazin-de-haine
+# magazin
