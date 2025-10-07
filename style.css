@@ -1,0 +1,43 @@
+body {
+  margin: 20px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.bar {
+  background: #8f8f8f;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* brand la stânga, butoane la dreapta */
+  padding: 0 18px;
+  border-radius: 4px;
+}
+
+.brand {
+  color: #fff;
+  font-size: 32px;
+}
+
+.center {
+  display: flex;
+  gap: 20px; /* 🔧 aici modifici distanța dintre butoane */
+}
+
+.butoane {
+  background: #fff;
+  padding: 8px 0; /* sus-jos */
+  width: 140px; /* 🔧 toate butoanele au aceeași lățime */
+  text-align: center; 
+  border-radius: 28px;
+  text-decoration: none;
+  color: #111;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.butoane:hover {
+  transform: translateY(-2px);
+  background: #f1f1f1;
+}
+
