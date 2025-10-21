@@ -23,7 +23,7 @@ body {
   color: white;             
   text-decoration: none;
   margin-left: 15px;
-  padding: 8px 12px;
+  padding: 8px 12px ;
   border-radius: 28px;     
   transition: background 0.3s, color 0.3s;
 }
@@ -44,3 +44,4 @@ body {
   padding: 30px;
   text-align: center;
 }
+.
