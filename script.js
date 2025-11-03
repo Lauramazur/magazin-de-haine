@@ -30,6 +30,5 @@ window.addEventListener('load', () => {
 });
 function afiseazaColectia() {
   document.getElementById('colectia-toamna').style.display = 'block';
-  // opțional: scroll către secțiune
   document.getElementById('colectia-toamna').scrollIntoView({behavior: "smooth"});
 }

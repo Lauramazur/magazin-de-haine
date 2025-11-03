@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Lumi - Contacte</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="navbar">
@@ -14,11 +16,23 @@
       <a href="contacte.html" class="active">Contacte</a>
     </div>
   </div>
+   <h1 class="contacte-titlu">Contacte</h1>
+    <div class="contacte-card">
+    <div class="contacte-info">
+      <h2>Contactează-ne</h2>
+      <p><i class="fas fa-phone"></i> +373xxxxxxx</p>
+      <p><i class="fas fa-envelope"></i> contact@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Locație</p>
+    </div>
 
-  <div class="content">
-    <h1>Contacte</h1>
-    <p>Email: contact@magazin.ro</p>
-    <p>Telefon: +373 600 00 000</p>
+    <div class="contacte-form">
+      <h2>Formular de contact</h2>
+      <form>
+        <input type="text" name="nume" placeholder="Nume" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="mesaj" rows="4" placeholder="Mesaj" required></textarea>
+        <button type="submit">Trimite</button>
+      </form>
+    </div>
   </div>
-</body>
 </html>

@@ -128,8 +128,6 @@ header p {
   justify-content: flex-start;
   padding: 50px;
 }
-
-/* imaginea stilizată în stânga */
 .poza-acasa {
   width: 350px;
   border-radius: 25px;
@@ -143,7 +141,6 @@ header p {
   transform: scale(1.05);
 }
 
-/* textul din dreapta */
 .text-acasa {
   max-width: 500px;
 }
@@ -159,5 +156,84 @@ header p {
   font-size: 1.2em;
 }
 .colectia-toamna {
-  display: none; /* ascunsă inițial */
+  display: none; 
+}
+.contacte-body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.contacte-titlu {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+.contacte-card {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+  background-color: #eae5e8;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+    justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.contacte-info,
+.contacte-form {
+  flex: 1;
+  padding: 30px;
+}
+
+.contacte-info {
+  border-right: 1px solid #ccc;
+}
+
+.contacte-info h2,
+.contacte-form h2 {
+  font-family: 'Cursive', sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #5a3e36;
+}
+
+.contacte-info p {
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.contacte-info i {
+  margin-right: 10px;
+}
+
+.contacte-form input,
+.contacte-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.contacte-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background-color: #d87c4a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contacte-form button:hover {
+  background-color: #bf6540;
 }
