@@ -32,3 +32,27 @@ function afiseazaColectia() {
   document.getElementById('colectia-toamna').style.display = 'block';
   document.getElementById('colectia-toamna').scrollIntoView({behavior: "smooth"});
 }
+const themeButton = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+// --- theme.js ---
+document.addEventListener("DOMContentLoaded", () => {
+  const themeButton = document.getElementById("theme-toggle");
+
+  // verifică tema salvată
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    if (themeButton) themeButton.textContent = "☀️";
+  }
+
+  // la apăsarea butonului
+  if (themeButton) {
+    themeButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+      const dark = document.body.classList.contains("dark-theme");
+      themeButton.textContent = dark ? "☀️" : "🌙";
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    });
+  }
+});
