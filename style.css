@@ -293,4 +293,8 @@ body {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
+body.dark-theme .contacte-card,
+body.dark-theme .contacte-card * {
+  color: #000000 !important;
+}
 
