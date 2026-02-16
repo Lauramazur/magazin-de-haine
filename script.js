@@ -1,5 +1,4 @@
 
-// ===== COLECȚIE =====
 function afiseazaColectia() {
   const sectiune = document.getElementById('colectia-toamna');
   if (!sectiune) return;
@@ -7,7 +6,6 @@ function afiseazaColectia() {
   sectiune.style.display = 'block';
   sectiune.scrollIntoView({ behavior: "smooth" });
 }
-// ===== DARK MODE =====
 document.addEventListener("DOMContentLoaded", () => {
   const themeButton = document.getElementById("theme-toggle");
   if (!themeButton) return;
@@ -36,22 +34,50 @@ document.addEventListener("DOMContentLoaded", () => {
 fetch("data.json")
   .then(res => res.json())
   .then(data => render(data));
-
 function render(data) {
-  const container = document.getElementById("card-container");
+  const colectieContainer = document.getElementById("card-container");
 
-  data.imageLinks.forEach(prod => {
-    const card = document.createElement("div");
-    card.className = "card";
+  if (colectieContainer && data.imageLinks) {
+    data.imageLinks.forEach(prod => {
+      const card = document.createElement("div");
+      card.className = "card";
 
-    card.innerHTML = `
-      <img src="${prod.src}">
-      <h3>${prod.name}</h3>
-      <p><strong>Preț:</strong> ${prod.price}</p>
-    `;
+      card.innerHTML = `
+        <img src="${prod.src}">
+        <h3>${prod.name}</h3>
+        <p><strong>Preț:</strong> ${prod.price}</p>
+      `;
 
-    container.appendChild(card);
-  });
+      colectieContainer.appendChild(card);
+    });
+  }
+  const imgContainer = document.querySelector(".acasa-images");
+
+  if (imgContainer && data.acasaImages) {
+    data.acasaImages.forEach(imgData => {
+      const img = document.createElement("img");
+      img.src = imgData.src;
+      img.alt = imgData.alt;
+      img.className = "poza-acasa";
+
+      imgContainer.appendChild(img);
+    });
+  }
+  const produseContainer = document.getElementById("produse-container");
+
+  if (produseContainer && data.produsePage) {
+    data.produsePage.forEach(prod => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${prod.src}">
+        <h3>${prod.name}</h3>
+        <p><strong>Preț:</strong> ${prod.price}</p>
+      `;
+
+      produseContainer.appendChild(card);
+    });
+  }
+
 }
-
-

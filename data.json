@@ -1,6 +1,9 @@
-{"title":"Lumi",
-"info":"Aici găsești haine pe placul și stilul tău!",
-"sectionName":"Colecția de toamnă",
+{  "acasaImages": [
+    {
+      "src": "https://i.pinimg.com/736x/33/ce/64/33ce64aeb0af0ff2fbf371a2ccee8aeb.jpg",
+      "alt": "model"
+    }
+],
   "imageLinks": [
     {
       "src": "https://i.pinimg.com/1200x/9c/78/95/9c7895e9144e0e79400c765a124a644d.jpg",
@@ -37,5 +40,111 @@
       "name": "Fustă plisată",
       "price": "250 lei"
     }
+  ],
+
+  "produsePage": [
+    {
+      "src": "https://i.pinimg.com/736x/00/39/5e/00395e318c0cb2b3aa00998b9bd92c89.jpg",
+      "name": "Geacă de piele",
+      "price": "1100 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/14/d1/56/14d156c49216342456049103c3b0d07e.jpg",
+      "name": "Geacă Crop Satinată cu Șnur Reglabil",
+      "price": "950 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/ff/aa/59/ffaa59da7e950825f4ea5dfb0fcc2fa0.jpg",
+      "name": "Bluză Transparentă din Tul cu Efect Drapat",
+      "price": "350 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/d7/3e/ff/d73eff33af0382facab88f0307c97b9d.jpg",
+      "name": "Geacă Fashion cu Cusături Evidențiate",
+      "price": "950 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/2d/e5/de/2de5dedbf59919061ab36f0d25e2bc42.jpg",
+      "name": "Top Fashion Asimetric cu Detaliu de Șiret",
+      "price": "550 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/53/5f/f7/535ff7f297779cf0755fffb85f807b0a.jpg",
+      "name": "Palton din Piele Ecologică cu Cordon în Talie",
+      "price": "1500 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/ab/8a/7d/ab8a7d67c94856df866a42eee3aeaace.jpg",
+      "name": "Bomber din Eco-Piele Verde cu Mâneci Elastice",
+      "price": "650 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/71/13/a0/7113a019afe780cfbbec8210f6cbdf2d.jpg",
+      "name": "Cargo Pants Oversized cu Curea Metalică",
+      "price": "450 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/2d/0c/c8/2d0cc829ef481913d283cfd7a1fe6276.jpg",
+      "name": "Set Denim Asimetric Gri - Jachetă & Fustă-Pantalon",
+      "price": "650 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/74/f7/99/74f799687794319e05b6bc26c1f430ae.jpg",
+      "name": "Rochie Couture Asimetrică-Pleated Fantasy",
+      "price": "1200 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/10/a3/6c/10a36c7e1d79ce0e3686d1ad204aa6b7.jpg",
+      "name": "Blugi - Dark Rebellion",
+      "price": "550 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/2f/67/fa/2f67fa254e80f3037c1fc5fff44220fc.jpg",
+      "name": "Fustă Mini Neagră Ajustabilă - Sleek Night",
+      "price": "350 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/27/28/41/272841ccdeaad8b1a68c35be38a14f77.jpg",
+      "name": "Top Transparent cu Legături - Dark Mist",
+      "price": "250 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/5d/1f/dd/5d1fdd7ba57e1382574ec93546a03d41.jpg",
+      "name": "Pantaloni Sculpturali cu Panouri",
+      "price": "450 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/ff/b3/78/ffb3783a3edfd7a21dea12b5ff13a77b.jpg",
+      "name": "Pantaloni transparenți evazați - Midnight Flow",
+      "price": "500 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/3a/8e/1f/3a8e1fd2746d510986467ef185d7f881.jpg",
+      "name": "Top sofisticat din voal - Pure Aura",
+      "price": "200 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/57/a3/f0/57a3f0429457c623832d59057e7a22be.jpg",
+      "name": "Fustă arhitecturală - Sculpted Vision",
+      "price": "500 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/be/3e/a0/be3ea0124ca34ade99a6594b25f23d87.jpg",
+      "name": "Rochie scurtă cu fustă amplă Luna Noir",
+      "price": "650 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/cc/4d/fb/cc4dfb86aa580388d89aca6958c7077a.jpg",
+      "name": "Bustieră structurată Cream Desire",
+      "price": "444 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/56/87/2a/56872aeae195b3261dbe2fe6d2631cee.jpg",
+      "name": "Blugi Urban Drift",
+      "price": "850 lei"
+    }
   ]
 }
+
+
+
