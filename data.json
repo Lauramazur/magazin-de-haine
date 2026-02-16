@@ -1,0 +1,41 @@
+{"title":"Lumi",
+"info":"Aici găsești haine pe placul și stilul tău!",
+"sectionName":"Colecția de toamnă",
+  "imageLinks": [
+    {
+      "src": "https://i.pinimg.com/1200x/9c/78/95/9c7895e9144e0e79400c765a124a644d.jpg",
+      "name": "Jachetă fashion teddy brown",
+      "price": "750 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/00/d4/d0/00d4d0552dcaca93648fa121971d17c6.jpg",
+      "name": "Pulover cardigan maro",
+      "price": "250 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/736x/80/cd/cb/80cdcb139a58b8c384d08a0bf1f05700.jpg",
+      "name": "Rochie fashion tricot",
+      "price": "550 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/0e/5f/60/0e5f6014c9aa771827e8dc59eeeff09a.jpg",
+      "name": "Pantaloni palazzo",
+      "price": "650 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/5c/ea/7d/5cea7d830f01a7ab35ec66390f573aa4.jpg",
+      "name": "Palton scurt bej",
+      "price": "850 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/3b/7c/09/3b7c09664ed46070a1606f66bae283c7.jpg",
+      "name": "Pulover oversize",
+      "price": "350 lei"
+    },
+    {
+      "src": "https://i.pinimg.com/1200x/21/f7/82/21f782bef8b2cf99ecba30c0248d8006.jpg",
+      "name": "Fustă plisată",
+      "price": "250 lei"
+    }
+  ]
+}

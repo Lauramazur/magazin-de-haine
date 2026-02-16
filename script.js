@@ -1,41 +1,3 @@
-// ===== CARUSEL =====
-window.addEventListener('load', () => {
-  const carousel = document.querySelector('.carousel-images');
-  const images = document.querySelectorAll('.carousel-images img');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-
-  // 👉 dacă nu există carusel pe pagină, ieșim
-  if (!carousel || images.length === 0 || !prevBtn || !nextBtn) return;
-
-  let counter = 0;
-  let size = images[0].clientWidth;
-
-  function updateCarousel() {
-    carousel.style.transform = `translateX(${-size * counter}px)`;
-  }
-
-  window.addEventListener('resize', () => {
-    size = images[0].clientWidth;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    counter = (counter + 1) % images.length;
-    updateCarousel();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    counter = (counter - 1 + images.length) % images.length;
-    updateCarousel();
-  });
-
-  setInterval(() => {
-    counter = (counter + 1) % images.length;
-    updateCarousel();
-  }, 4000);
-});
-
 
 // ===== COLECȚIE =====
 function afiseazaColectia() {
@@ -71,3 +33,25 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(dark ? "Tema DARK activată" : "Tema LIGHT activată");
   });
 });
+fetch("data.json")
+  .then(res => res.json())
+  .then(data => render(data));
+
+function render(data) {
+  const container = document.getElementById("card-container");
+
+  data.imageLinks.forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img src="${prod.src}">
+      <h3>${prod.name}</h3>
+      <p><strong>Preț:</strong> ${prod.price}</p>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+
