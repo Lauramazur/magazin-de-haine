@@ -79,5 +79,54 @@ function render(data) {
       produseContainer.appendChild(card);
     });
   }
+}
+document.addEventListener("DOMContentLoaded", () => {
 
+  const form = document.getElementById("form-sugestie");
+
+  if (form) {
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const nume = document.getElementById("nume-produs").value;
+      const img = document.getElementById("imagine-produs").value;
+
+      const sugestie = { nume, img };
+
+      let listaSugestii = JSON.parse(localStorage.getItem("sugestii")) || [];
+      listaSugestii.push(sugestie);
+      localStorage.setItem("sugestii", JSON.stringify(listaSugestii));
+
+      document.getElementById("mesaj-confirmare").textContent =
+        "Mulțumim! Sugestia ta a fost trimisă!";
+
+      form.reset();
+
+      afiseazaSugestii(); // reafișează imediat
+    });
+  }
+
+  afiseazaSugestii(); 
+
+});
+
+
+function afiseazaSugestii() {
+  const lista = JSON.parse(localStorage.getItem("sugestii")) || [];
+  const container = document.getElementById("lista-sugestii");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  lista.forEach(s => {
+    const div = document.createElement("div");
+    div.className = "sugestii";
+
+    div.innerHTML = `
+      <img src="${s.img}" alt="${s.nume}" class="sugestie-imagine">
+      <strong>${s.nume}</strong>
+    `;
+
+    container.appendChild(div);
+  });
 }

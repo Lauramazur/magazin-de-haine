@@ -32,8 +32,21 @@
     <div class="card-container" id="card-container">
     </div>
   </section>
+  <section class="sugestii" id="sugestii">
+  <h2>Propune un produs nou</h2>
+  <p>Ai o idee pentru colecția următoare? Scrie mai jos și plasează imaginea referință a ținutei care vreai să o vezi la noi 👇</p>
+  <form id="form-sugestie">
+    <input type="text" id="nume-produs" placeholder="Numele produsului" required>
+      <input type="url" id="imagine-produs" placeholder="Link imagine produs" required>
+    <button type="submit">Trimite sugestia</button>
+  </form>
+  <p id="mesaj-confirmare"></p>
 </section>
-
+<section id="propunerile-voastre">
+  <h2>Propunerile voastre</h2>
+  <div id="lista-sugestii"></div>
+</section>
+</section>
 <script src="script.js" defer></script>
 </body>
 </html>
