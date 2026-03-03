@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       form.reset();
 
-      afiseazaSugestii(); // reafișează imediat
+      afiseazaSugestii(); 
     });
   }
 
@@ -110,23 +110,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
 function afiseazaSugestii() {
   const lista = JSON.parse(localStorage.getItem("sugestii")) || [];
   const container = document.getElementById("lista-sugestii");
+
   if (!container) return;
 
   container.innerHTML = "";
 
   lista.forEach(s => {
-    const div = document.createElement("div");
-    div.className = "sugestii";
+    
+    const card = document.createElement("div");
+    card.className = "card";
 
-    div.innerHTML = `
-      <img src="${s.img}" alt="${s.nume}" class="sugestie-imagine">
-      <strong>${s.nume}</strong>
-    `;
 
-    container.appendChild(div);
+    const img = document.createElement("img");
+    img.src = s.img;
+    img.alt = s.nume;
+
+  
+    const p = document.createElement("p");
+    p.textContent = s.nume;
+
+  
+    card.appendChild(img);
+    card.appendChild(p);
+    container.appendChild(card);
   });
 }
