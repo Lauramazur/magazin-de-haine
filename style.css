@@ -350,3 +350,22 @@ body.dark-theme .contacte-card * {
   margin-top: 8px;
   font-weight: 500;
 }
+.filtru-produse{
+  text-align:center;
+  margin:30px 0;
+}
+
+.filtru-produse button{
+  background:#f5c6c6;
+  border:none;
+  padding:10px 20px;
+  margin:5px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+.filtru-produse button:hover{
+  background:#ff9e9e;
+}

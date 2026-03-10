@@ -1,4 +1,4 @@
-
+let toateProdusele = [];
 function afiseazaColectia() {
   const sectiune = document.getElementById('colectia-toamna');
   if (!sectiune) return;
@@ -31,6 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(dark ? "Tema DARK activată" : "Tema LIGHT activată");
   });
 });
+function afiseazaProduse(lista){
+  const produseContainer = document.getElementById("produse-container");
+
+  if(!produseContainer) return;
+
+  produseContainer.innerHTML = "";
+
+  lista.forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img src="${prod.src}">
+      <h3>${prod.name}</h3>
+      <p><strong>Preț:</strong> ${prod.price}</p>
+    `;
+
+    produseContainer.appendChild(card);
+  });
+}
 fetch("data.json")
   .then(res => res.json())
   .then(data => render(data));
@@ -64,77 +84,82 @@ function render(data) {
     });
   }
   const produseContainer = document.getElementById("produse-container");
+if(produseContainer&&data.produsePage){
+  toateProdusele=data.produsePage;
+  afiseazaProduse(toateProdusele);
+}
+}
+function afiseazaProduse(lista){
+  const produseContainer = document.getElementById("produse-container");
+  if(!produseContainer) return;
 
-  if (produseContainer && data.produsePage) {
-    data.produsePage.forEach(prod => {
-      const card = document.createElement("div");
-      card.className = "card";
+  produseContainer.innerHTML = "";
 
-      card.innerHTML = `
-        <img src="${prod.src}">
-        <h3>${prod.name}</h3>
-        <p><strong>Preț:</strong> ${prod.price}</p>
-      `;
+  lista.forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "card";
 
-      produseContainer.appendChild(card);
-    });
-  }
+    card.innerHTML = `
+      <img src="${prod.src}">
+      <h3>${prod.name}</h3>
+      <p><strong>Preț:</strong> ${prod.price}</p>
+    `;
+
+    produseContainer.appendChild(card);
+  });
 }
 document.addEventListener("DOMContentLoaded", () => {
-
   const form = document.getElementById("form-sugestie");
-
   if (form) {
     form.addEventListener("submit", function(e){
       e.preventDefault();
-
       const nume = document.getElementById("nume-produs").value;
       const img = document.getElementById("imagine-produs").value;
-
       const sugestie = { nume, img };
-
       let listaSugestii = JSON.parse(localStorage.getItem("sugestii")) || [];
       listaSugestii.push(sugestie);
       localStorage.setItem("sugestii", JSON.stringify(listaSugestii));
-
       document.getElementById("mesaj-confirmare").textContent =
         "Mulțumim! Sugestia ta a fost trimisă!";
-
       form.reset();
-
       afiseazaSugestii(); 
     });
   }
-
   afiseazaSugestii(); 
-
 });
-
 function afiseazaSugestii() {
   const lista = JSON.parse(localStorage.getItem("sugestii")) || [];
   const container = document.getElementById("lista-sugestii");
 
   if (!container) return;
-
   container.innerHTML = "";
-
   lista.forEach(s => {
-    
     const card = document.createElement("div");
     card.className = "card";
-
-
     const img = document.createElement("img");
     img.src = s.img;
     img.alt = s.nume;
-
-  
     const p = document.createElement("p");
     p.textContent = s.nume;
-
-  
     card.appendChild(img);
     card.appendChild(p);
     container.appendChild(card);
   });
+}
+function filtreaza(categorie){
+  const catNorm = removeDiacritics(categorie);
+
+  if(catNorm === "toate"){
+    afiseazaProduse(toateProdusele);
+    return;
+  }
+
+  const filtrate = toateProdusele.filter(prod =>
+    removeDiacritics(prod.name).includes(catNorm)
+  );
+
+  afiseazaProduse(filtrate);
+}
+function removeDiacritics(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
